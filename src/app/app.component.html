@@ -15,6 +15,5 @@
     </div>
     <button (click)="addArticle(newTitle, newLink)" class="btn btn-primary">Submit Link</button>
   </fieldset>
-  
 </form>
 <app-article *ngFor="let article of sortedArticles()" [article]="article"></app-article>
