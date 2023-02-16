@@ -1,8 +1,10 @@
 <div class="container">
-  <h1>hell from reddit</h1>
+  <h1>Graham Lyons S00225961</h1>
+  <h2>Reddit App</h2>
 </div>
 <form>
   <fieldset class="form-group">
+    <legend>Add a Link</legend>
     <div class="form-group">
       <label for="title">Title</label>
       <input name="title" class="form-control" placeholder="Enter link title" #newTitle>
@@ -11,8 +13,8 @@
       <label for="link">Link</label>
       <input name="link" class="form-control" placeholder="Enter URL" #newLink>
     </div>
-  <button (click)="addArticle(newTitle, newLink)">Submit Link</button>
+    <button (click)="addArticle(newTitle, newLink)" class="btn btn-primary">Submit Link</button>
   </fieldset>
   
 </form>
-<app-article *ngFor="let article of articles" [article]="article"></app-article>
+<app-article *ngFor="let article of sortedArticles()" [article]="article"></app-article>
